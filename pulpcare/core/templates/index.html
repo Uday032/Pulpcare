@@ -1,0 +1,179 @@
+  {% extends './layouts/base-afterlogin.html' %}
+
+  {% load static %}
+
+  {% block content %}
+    <div class="editor_main_section">
+        <div class="nav_bar_editor">
+        <div class="editor-nav-bar-left-block">
+            <a href="#" class="link-block-21 w-inline-block"><img src="{% static 'images/dark-logo.svg' %}" alt="" class="image-102"></a>
+        </div>
+        <div class="editor-nav-bar-right-block">
+            <div data-hover="1" data-delay="0" class="nav-bar-dropdown w-dropdown">
+            <div class="nav-bar-dropdown-toggle w-dropdown-toggle">
+                <div class="icon w-icon-dropdown-toggle"></div><img src="{% static 'images/e1f0102a.png' %}" loading="lazy" sizes="(max-width: 991px) 100vw, (max-width: 1279px) 30px, (max-width: 1919px) 2vw, 30px" srcset="{% static 'images/e1f0102a-p-500.png' %} 500w, {% static 'images/e1f0102a.png' %} 770w" alt="" class="user-image">
+            </div>
+            <nav class="nav-bar-dropdown-list user-account w-dropdown-list">
+                <div class="moving-arrow---user-account"></div>
+                <a href="#" class="my-account-link-block w-inline-block"><img src="{% static 'images/dark-logo.svg' %}" loading="lazy" alt="" class="dark-logo-editor">
+                <div class="my-account-label">Dashboard</div>
+                </a>
+                <a href="#" class="my-account-link-block w-inline-block"><img src="{% static 'images/power.svg' %}" loading="lazy" alt="" class="log-out-icon">
+                <div class="my-account-label">Log Out</div>
+                </a>
+            </nav>
+            </div>
+        </div>
+        </div>
+        <div class="editor_main_view_wrapper">
+        <div class="editor_main_view_left_block">
+            <div class="editor_form_block w-form">
+            <form id="email-form" name="email-form" data-name="Email Form" class="editor_form">
+                <div data-animation="cross" data-hide-arrows="1" data-disable-swipe="1" data-duration="500" data-infinite="1" class="slider-editor w-slider">
+                <div class="mask---editor w-slider-mask">
+                    <div class="slide w-slide">
+                    <div class="editor_card add_logo">
+                        <div class="title_container"></div>
+                        <div class="main_editor_card_container">
+                        <div class="title_editor upload-logo">Upload  Logo</div>
+                        <div class="logo_image_container"><img src="{% static 'images/upload-logo.svg' %}"  height="160" alt="" id='clinic-logo' class="clinic-logo"></div>
+                        <div class="title_editor upload-logo">
+                            <input type="file" id="myfile" name="myfile">
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="slide w-slide">
+                    <div class="editor_card tag_line">
+                        <div class="title_container"></div>
+                        <div class="main_editor_card_container">
+                        <div class="collaborate-form-step">
+                            <div class="step-counter">1/5</div>
+                            <div class="title_editor">Website Welcome Message</div>
+                            <div class="div-block-149">
+                            <div class="radio-buttons-grid editor"><label class="radio-button-field editor w-radio">
+                                <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button---custom editor w-radio-input"></div><input type="radio" data-name="hero_tag_line" id="option_" name="hero_tag_line" value="option_1" style="opacity:0;position:absolute;z-index:-1"><span for="option_" class="radio-button-label editor w-form-label">{ San Fransisco Family Dentistry } welcomes you ! </span>
+                                </label><label class="radio-button-field editor w-radio">
+                                <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button---custom editor w-radio-input"></div><input type="radio" data-name="hero_tag_line" id="option_-2" name="hero_tag_line" value="option_2" style="opacity:0;position:absolute;z-index:-1"><span for="option_" class="radio-button-label editor w-form-label">Welcome to High-Tech &amp; Compassionate Dentistry in { Austin }</span>
+                                </label><label class="radio-button-field editor w-radio">
+                                <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button---custom editor w-radio-input"></div><input type="radio" data-name="hero_tag_line" id="option_-3" name="hero_tag_line" value="option_3" style="opacity:0;position:absolute;z-index:-1"><span for="option_" class="radio-button-label editor w-form-label">{ San Fransisco Family Dentistry} , best in { Austin }! </span>
+                                </label><label class="radio-button-field editor w-radio">
+                                <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button---custom editor w-radio-input"></div><input type="radio" data-name="hero_tag_line" id="option_-4" name="hero_tag_line" value="option_4" style="opacity:0;position:absolute;z-index:-1"><span for="option_" class="radio-button-label editor w-form-label">Quality Dental Care from Experienced Team</span>
+                                </label></div><textarea placeholder="Type my own.... (max : 168 characters)" maxlength="168" id="hero_tag_line_text_input" name="hero_tag_line_text_input" data-name="Hero Tag Line Text Input" class="my_tag_line_text_field editor w-input"></textarea>
+                            </div>
+                            <input type="submit" id="form-submit" value="Submit" />
+                            <div class="uploadstatus"></div>
+                        </div>            
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="left-arrow w-slider-arrow-left">
+                    <div class="arrow_text">Back</div>
+                    <div class="icon w-icon-slider-left"></div>
+                </div>
+                <div class="right-arrow w-slider-arrow-right">
+                    <div class="arrow_text">Next</div>
+                    <div class="icon w-icon-slider-right"></div>
+                </div>
+                <div class="slide-nav w-slider-nav w-round"></div>
+                </div>
+            </form>
+            <div class="w-form-done">
+                <div>Thank you! Your submission has been received!</div>
+            </div>
+            <div class="w-form-fail">
+                <div>Oops! Something went wrong while submitting the form.</div>
+            </div>
+            </div>
+        </div>
+        <div class="editor_main_view_right_block">
+            <div class="logo-section">
+                <div class="office-logo-here"><img src="{% static 'images/ada-logo.png' %}" loading="lazy" alt="" id='office-logo' class="office-logo"></div>
+            </div>  
+            <div class="tag-line-section">
+                <div class="tag_line_container">
+                <h1 class="tag-line-label" id="tagline">This is Tag Line</h1>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function readURL(input) {
+            console.log("INSIE");
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#clinic-logo')
+                        .attr('src', e.target.result);
+                    $('#office-logo').attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0])
+            }
+        }
+
+        $("#myfile").change(function() {
+            readURL(this);
+        });
+
+        $(function() {
+            $("input[name='hero_tag_line']").click(function () {
+                var var_name = $("input[name='hero_tag_line']:checked");
+                $("#tagline").text(var_name.next().text());
+                // $('#btn_get').val(var_name);
+            });
+        });
+
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        $("#form-submit").click(function(e) {
+            e.preventDefault();
+            var this_ = $(this);
+            var createurl = 'http://127.0.0.1:8000/core/create'
+            var formData = new FormData();
+            var tagline = ''
+            console.log($("#hero_tag_line_text_input").val());
+            if($("#hero_tag_line_text_input").val()){
+                tagline = $("#hero_tag_line_text_input").val()
+            } else {
+                tagline = $("input[name='hero_tag_line']:checked").next().text()
+            }
+            formData.append('logo', $("#myfile")[0].files[0]);
+            formData.append('tagline', tagline);
+            $.ajax({
+                url: createurl,
+                method: "POST",
+                data: formData,
+                headers: {
+                    'X-CSRFToken': getCookie('csrftoken'),
+                },
+                dataType: 'json',
+                contentType: false, // NEEDED, DON'T OMIT THIS (requires jQuery 1.6+)
+                processData: false,
+                success: function(data) {
+                    console.log("success");
+                    $(".uploadstatus").html("<p>Success</p><a href='http://127.0.0.1:8000/core/websites' target='_blank'> Click here to see all stored websites</a>")
+                }, error: function(error) {
+                    console.log("error");
+                }
+            })
+        })
+    </script>
+  {% endblock %}

@@ -1,0 +1,16 @@
+{% extends './layouts/base-afterlogin.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="logo-section">
+        <div class="office-logo-here"><img src="http://127.0.0.1:8000/media/{{logo}}" loading="lazy" alt="" id='office-logo' class="office-logo"></div>
+    </div>  
+    <div class="tag-line-section">
+        <div class="tag_line_container">
+        <h1 class="tag-line-label" id="tagline">{{tagline}}</h1>
+        </div>
+    </div>
+
+
+{% endblock %}
