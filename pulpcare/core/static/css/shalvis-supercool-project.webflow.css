@@ -674,6 +674,13 @@
   margin-top: 20px;
 }
 
+.editor_main_view_right_block:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
 .editor_main_view_right_block {
   /* display: -webkit-box;
   display: -webkit-flex; */
@@ -921,6 +928,13 @@
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+input[type="file"]:focus + .main_editor_card_container {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
 }
 
 .main_editor_card_container {

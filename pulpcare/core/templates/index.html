@@ -30,7 +30,7 @@
             <div class="editor_form_block w-form">
             <form id="email-form" name="email-form" data-name="Email Form" class="editor_form">
                 <div data-animation="cross" data-hide-arrows="1" data-disable-swipe="1" data-duration="500" data-infinite="1" class="slider-editor w-slider">
-                <div class="mask---editor w-slider-mask">
+                <div class="mask---editor w-slider-mask" tabindex="1">
                     <div class="slide w-slide">
                     <div class="editor_card add_logo">
                         <div class="title_container"></div>
@@ -46,7 +46,7 @@
                     <div class="slide w-slide">
                     <div class="editor_card tag_line">
                         <div class="title_container"></div>
-                        <div class="main_editor_card_container">
+                        <div class="main_editor_card_container" id="secondslide">
                         <div class="collaborate-form-step">
                             <div class="step-counter">1/5</div>
                             <div class="title_editor">Website Welcome Message</div>
@@ -69,11 +69,11 @@
                     </div>
                 </div>
                 <div class="left-arrow w-slider-arrow-left">
-                    <div class="arrow_text">Back</div>
+                    <div class="arrow_text" id="back">Back</div>
                     <div class="icon w-icon-slider-left"></div>
                 </div>
                 <div class="right-arrow w-slider-arrow-right">
-                    <div class="arrow_text">Next</div>
+                    <div class="arrow_text" id="next">Next</div>
                     <div class="icon w-icon-slider-right"></div>
                 </div>
                 <div class="slide-nav w-slider-nav w-round"></div>
@@ -87,7 +87,7 @@
             </div>
             </div>
         </div>
-        <div class="editor_main_view_right_block">
+        <div class="editor_main_view_right_block" tabindex="1">
             <div class="logo-section">
                 <div class="office-logo-here"><img src="{% static 'images/ada-logo.png' %}" loading="lazy" alt="" id='office-logo' class="office-logo"></div>
             </div>  
@@ -119,8 +119,25 @@
             readURL(this);
         });
 
+        $('#myfile').click(function() {
+            $('.main_editor_card_container').attr("tabindex","1");
+            $('.main_editor_card_container').focus();
+        });
+
+        $('#back').click(function() {
+            $('.main_editor_card_container').attr("tabindex","1");
+            $('.main_editor_card_container').focus();
+        });
+
+        $('#next').click(function() {
+            $('#secondslide').attr("tabindex","1");
+            $('#secondslide').focus();
+        });
+
         $(function() {
             $("input[name='hero_tag_line']").click(function () {
+                $('#secondslide').attr("tabindex","1");
+                $('#secondslide').focus();
                 var var_name = $("input[name='hero_tag_line']:checked");
                 $("#tagline").text(var_name.next().text());
                 // $('#btn_get').val(var_name);
@@ -142,6 +159,8 @@
             }
             return cookieValue;
         }
+
+        
 
         $("#form-submit").click(function(e) {
             e.preventDefault();
