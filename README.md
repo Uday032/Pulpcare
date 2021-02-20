@@ -22,4 +22,4 @@ git clone https://github.com/Uday032/Pulpcare.git
 ```
 
 Go to http://localhost:8000/admin and, the superuser credentials to access the database.
-Go to http://localhost:8000/core to access the website.
+Go to http://localhost:8000/ to access the website.

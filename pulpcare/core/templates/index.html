@@ -165,7 +165,7 @@
         $("#form-submit").click(function(e) {
             e.preventDefault();
             var this_ = $(this);
-            var createurl = 'http://127.0.0.1:8000/core/create'
+            var createurl = 'http://127.0.0.1:8000/create'
             var formData = new FormData();
             var tagline = ''
             console.log($("#hero_tag_line_text_input").val());
@@ -188,7 +188,7 @@
                 processData: false,
                 success: function(data) {
                     console.log("success");
-                    $(".uploadstatus").html("<p>Success</p><a href='http://127.0.0.1:8000/core/websites' target='_blank'> Click here to see all stored websites</a>")
+                    $(".uploadstatus").html("<p>Success</p><a href='http://127.0.0.1:8000/websites' target='_blank'> Click here to see all stored websites</a>")
                 }, error: function(error) {
                     console.log("error");
                 }
