@@ -11,9 +11,15 @@ from .serializers import WebsiteSerializers
 # Create your views here.
 
 def mainpage(request,*args, **kwargs):
+    """
+        Show Main Page UI
+    """
     return render(request,"index.html")
 
 def websites(request,*args, **kwargs):
+    """
+        Returns All Websites that has been created by the user in a table format
+    """
     queryset = Website.objects.all()
     serializer = WebsiteSerializers(queryset, many=True)
     content = {
@@ -22,6 +28,9 @@ def websites(request,*args, **kwargs):
     return render(request,"websites.html", content)
 
 def getwebsite(request,id, *args, **kwargs):
+    """
+        Returns Website with all the details
+    """
     queryset = Website.objects.get(pk=id)
     print(queryset.logo)
     # serializer = WebsiteSerializers(queryset, many=Flase)
@@ -32,7 +41,11 @@ def getwebsite(request,id, *args, **kwargs):
     return render(request,"createdwebsite.html", content)
 
 class CreateWebsite(APIView):
-
+    """
+        Class Based View to POST upload all the input data into database. 
+        Also, GET is also set to return the list of all the websites that has 
+        been created.
+    """
     serializer_class = WebsiteSerializers
 
     def get(self, request, *args, **kwargs):
